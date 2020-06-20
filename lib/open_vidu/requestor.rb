@@ -31,6 +31,7 @@ module OpenVidu
         },
         verify: server.verify_peer?,
         timeout: server.timeout,
+        open_timeout: server.timeout,
         body: params.to_json
       }
     end

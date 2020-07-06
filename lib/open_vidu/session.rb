@@ -43,5 +43,11 @@ module OpenVidu
         :session, :delete, "api/sessions/#{customSessionId}", { options: { server: server } }
       ).execute
     end
+
+    def delete_connection(id, connection_id)
+      OpenVidu::Command.new(
+        :session, :delete, "api/sessions/#{id}/connection/#{connection_id}", { options: { server: server } }
+      ).execute
+    end
   end
 end
